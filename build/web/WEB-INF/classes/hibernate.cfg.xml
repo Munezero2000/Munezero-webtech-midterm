@@ -49,5 +49,12 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="model.User"/>
+    <mapping class="model.Student"/>
+    <mapping class="model.Course"/>
+    <mapping class="model.Teacher"/>
+    <mapping class="model.StudentRegistration"/>
+    <mapping class="model.CourseDefinition"/>
+    <mapping class="model.AcademicUnit"/>
+    <mapping class="model.Semester"/>
   </session-factory>
 </hibernate-configuration>

@@ -8,13 +8,21 @@
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
-     <error-page>
-  	<error-code>500</error-code>
-  	<location>/AppExceptionHandler</location>
-  </error-page>
-  
-  <error-page>
-  <exception-type>javax.servlet.ServletException</exception-type>
-  <location>/AppExceptionHandler</location>
-  </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error</location>
+    </error-page>
+
+    <servlet>
+        <servlet-name>errorPageServlet</servlet-name>
+        <servlet-class>com.magtech.ErrorPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>errorPageServlet</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
 </web-app>

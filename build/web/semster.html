@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Semesters</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light grey */
+      color: #343a40; /* Dark grey */
+      padding: 20px;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .dropdown-menu {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mb-4">Semester Management</h1>
+
+  <!-- Add New Semester -->
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle mb-3 w-100" type="button" id="addSemesterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Add New Semester
+    </button>
+    <div class="dropdown-menu" aria-labelledby="addSemesterDropdown">
+      <form action="SemesterController" method="post" class="px-4 py-3">
+        <div class="form-group">
+          <label for="semesterName">Semester Name:</label>
+          <input type="text" class="form-control" id="semesterName" name="semesterName" placeholder="Enter Semester Name">
+        </div>
+        <div class="form-group">
+          <label for="startingDate">Starting Date:</label>
+          <input type="date" class="form-control" id="startingDate" name="startingDate">
+        </div>
+        <div class="form-group">
+          <label for="endDate">End Date:</label>
+          <input type="date" class="form-control" id="endDate" name="endDate">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Semester</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Update Semester -->
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle mb-3 w-100" type="button" id="updateSemesterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Update Semester
+    </button>
+    <div class="dropdown-menu" aria-labelledby="updateSemesterDropdown">
+      <form action="UpdateSemesterController" class="px-4 py-3">
+        <div class="form-group">
+          <label for="updateSemesterId">Semester ID to Update:</label>
+          <input type="text" class="form-control" id="updateSemesterId" name="semesterId" placeholder="Enter Semester ID">
+        </div>
+        <div class="form-group">
+          <label for="updateSemesterName">Semester Name:</label>
+          <input type="text" class="form-control" id="updateSemesterName" name="semesterName" placeholder="Enter Semester Name">
+        </div>
+        <div class="form-group">
+          <label for="updateStartingDate">Starting Date:</label>
+          <input type="date" class="form-control" id="updateStartingDate" name="startingDate">
+        </div>
+        <div class="form-group">
+          <label for="updateEndDate">End Date:</label>
+          <input type="date" class="form-control" id="updateEndDate" name="endDate">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Update Semester</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Delete Semester -->
+  <div class="dropdown">
+    <button class="btn btn-danger dropdown-toggle mb-3 w-100" type="button" id="deleteSemesterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Delete Semester
+    </button>
+    <div class="dropdown-menu" aria-labelledby="deleteSemesterDropdown">
+      <form action="SemesterController" class="px-4 py-3">
+        <div class="form-group">
+          <label for="deleteSemesterId">Semester ID to Delete:</label>
+          <input type="text" class="form-control" id="deleteSemesterId" name="semesterId" placeholder="Enter Semester ID">
+        </div>
+        <button type="submit" class="btn btn-danger w-100">Delete Semester</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for Dropdown functionality -->
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    // Enable Bootstrap dropdowns
+    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var dropdownMenu = this.nextElementSibling;
+        if (dropdownMenu.style.display === "block") {
+          dropdownMenu.style.display = "none";
+        } else {
+          dropdownMenu.style.display = "block";
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

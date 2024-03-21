@@ -20,8 +20,13 @@ import model.User;
  *
  * @author magtech
  */
-@WebServlet(name = "SignupServlet", urlPatterns = {"/register"})
+@WebServlet("/register")
 public class SignupServlet extends HttpServlet {
+     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException{
+            res.getWriter().println("Visited");
+            doPost(req, res);
+     }
+      @Override
       public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException{
         // Getting data from the form
         String email = req.getParameter("email");
@@ -44,13 +49,7 @@ public class SignupServlet extends HttpServlet {
         User user = new User();
         user.setEmail(email);
         user.setPassword(hashedPassword);
-        if (role == "ADMIN"){
-            user.setRole(Role.ADMIN);
-        }else if(role == "TEACHER"){
-              user.setRole(Role.TEACHER);
-        }else{
-        user.setRole(Role.STUDENT);
-        };
+        user.setStatus(Role.valueOf(role));
         
         UserDao userDao= new UserDao();
         

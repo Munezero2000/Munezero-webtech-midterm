@@ -2,15 +2,10 @@ package model;
 
 import javax.persistence.*;
 
-/**
- *
- * @author magtech
- */
-
 @Entity
 @Table(name="users")
 public class User {
-   @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
@@ -21,7 +16,8 @@ public class User {
     @Column(name = "password")
     private String password;
     
-    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status") 
     private Role status;
 
     public User() {
@@ -58,13 +54,11 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
+    public Role getStatus() {
         return status;
     }
 
-    public void setRole(Role status) {
+    public void setStatus(Role status) {
         this.status = status;
     }
-    
-    
 }
