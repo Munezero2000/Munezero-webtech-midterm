@@ -5,6 +5,7 @@ import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import org.hibernate.annotations.OnDeleteAction;
 
 /**
  *
@@ -21,7 +22,6 @@ public class CourseDefinition implements Serializable {
     @Column(name ="course_definition_description")
     private String description ;
     
-
     @OneToOne
     @JoinColumn(name = "course_id")
     private Course course; 
@@ -58,6 +58,5 @@ public class CourseDefinition implements Serializable {
     public void setCourse(Course course) {
         this.course = course;
     }
-    
     
 }

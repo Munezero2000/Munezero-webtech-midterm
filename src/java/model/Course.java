@@ -1,9 +1,11 @@
-
 package model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 /**
  *
@@ -11,45 +13,56 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "course")
-public class Course {
+public class Course implements Serializable {
 
-    
     @Id
     @Column(name = "course_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
+    @Column(name = "course_code")
+    private String courseCode;
+
     @Column(name = "course_name")
     private String courseName;
-    
-    @Column(name = "semester_id")
+
+    @OneToOne
+    @JoinColumn(name = "semester_id")
     private Semester semester;
-    
+
     @OneToOne
     @JoinColumn(name = "department_id")
     private AcademicUnit department;
-    
+
     @OneToOne(mappedBy = "course")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private CourseDefinition courseDefinition;
+    
     @OneToOne(mappedBy = "course")
     private Teacher teacher;
 
     public Course() {
     }
 
-    public Course(CourseDefinition courseDefinition, Long id, String courseName, Semester semester, AcademicUnit department) {
-        this.courseDefinition = courseDefinition;
+    public Course(Long id) {
         this.id = id;
+    }
+
+    public Course(Long id, String courseCode, String courseName, Semester semester, AcademicUnit department, CourseDefinition courseDefinition, Teacher teacher) {
+        this.id = id;
+        this.courseCode = courseCode;
         this.courseName = courseName;
         this.semester = semester;
         this.department = department;
+        this.courseDefinition = courseDefinition;
+        this.teacher = teacher;
     }
 
-    public CourseDefinition getCourseDefinition() {
-        return courseDefinition;
-    }
-
-    public void setCourseDefinition(CourseDefinition courseDefinition) {
+    public Course(String courseCode, String courseName, Semester semester, AcademicUnit department, CourseDefinition courseDefinition) {
+        this.courseCode = courseCode;
+        this.courseName = courseName;
+        this.semester = semester;
+        this.department = department;
         this.courseDefinition = courseDefinition;
     }
 
@@ -59,6 +72,14 @@ public class Course {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 
     public String getCourseName() {
@@ -84,6 +105,20 @@ public class Course {
     public void setDepartment(AcademicUnit department) {
         this.department = department;
     }
-    
-    
+
+    public CourseDefinition getCourseDefinition() {
+        return courseDefinition;
+    }
+
+    public void setCourseDefinition(CourseDefinition courseDefinition) {
+        this.courseDefinition = courseDefinition;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 }

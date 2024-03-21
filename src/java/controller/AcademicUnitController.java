@@ -32,7 +32,7 @@ public class AcademicUnitController extends HttpServlet {
         EAcademicUnit academicUnitType = EAcademicUnit.valueOf(request.getParameter("academicUnitType"));
         String parent = request.getParameter("parentId");
         AcademicUnit theAcademicUnit = new AcademicUnit();
-        if (parent != null) {
+        if (!parent.isEmpty()) {
             Long parentId = Long.parseLong(parent);
             theAcademicUnit.setAcademicUnitId(parentId);
         }else{
