@@ -31,7 +31,6 @@ public class UpdateSemesterController extends HttpServlet {
     
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Update Semester
         Long semesterId = Long.parseLong(request.getParameter("semesterId"));
         String semesterName = request.getParameter("semesterName");
         Date startingDate = null;
@@ -41,7 +40,6 @@ public class UpdateSemesterController extends HttpServlet {
             startingDate = dateFormat.parse(request.getParameter("startingDate"));
             endDate = dateFormat.parse(request.getParameter("endDate"));
         } catch (ParseException e) {
-            e.printStackTrace();
         }
 
         Semester semester = new Semester(semesterId, semesterName, startingDate, endDate);

@@ -27,7 +27,7 @@ public class StudentRegistration implements Serializable {
     @ManyToOne
     @JoinColumn(name = "semester_id")
     private Semester semester;
-    
+        
     @ManyToOne
     @JoinColumn(name = "department_id")
     private AcademicUnit department;

@@ -77,8 +77,4 @@ public class Semester implements Serializable {
         this.endDate = endDate;
     }
 
-    public void setId(Long semesterId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

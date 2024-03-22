@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import java.io.Serializable;
@@ -13,30 +8,40 @@ import javax.persistence.*;
  * @author magtech
  */
 @Entity
-@Table(name = "")
+@Table(name = "teachers")
 public class Teacher implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="teacher_id")
+    @Column(name = "teacher_id")
     private Long Id;
-    
+
     @Column(name = "first_name")
     private String firstName;
-    
+
     @Column(name = "last_name")
     private String lastName;
-    
-    @Column(name="qualification")
-    private String  qualification;
-    
+
+    @Column(name = "qualification")
+    @Enumerated(EnumType.STRING)
+    private EQualification qualification;
+
     @OneToOne
-     @JoinColumn(name = "course_id")
+    @JoinColumn(name = "course_id")
     private Course course;
 
     public Teacher() {
     }
 
-    public Teacher(Long Id, String firstName, String lastName, String qualification, Course course) {
+    public Teacher(String firstName, String lastName, EQualification qualification, Course course) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.qualification = qualification;
+        this.course = course;
+    }
+    
+    
+    public Teacher(Long Id, String firstName, String lastName, EQualification qualification, Course course) {
         this.Id = Id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -68,11 +73,11 @@ public class Teacher implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getQualification() {
+    public EQualification getQualification() {
         return qualification;
     }
 
-    public void setQualification(String qualification) {
+    public void setQualification(EQualification qualification) {
         this.qualification = qualification;
     }
 
@@ -83,7 +88,5 @@ public class Teacher implements Serializable {
     public void setCourse(Course course) {
         this.course = course;
     }
-    
-    
     
 }

@@ -3,6 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/web/academicUnit.html</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/StudentController.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/User.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/CourseController.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateCourseController.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/EQualification.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateAcademicUnitController.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/StudentRegistration.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/Course.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/TeacherController.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateTeacherController.java</file>
+            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/web/semster.html</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/CourseDefinition.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/SaveSemesterController.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/web/course.html</file>
@@ -11,20 +23,11 @@
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateSemesterController.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/EAcademicUnit.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/web/student.html</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/web/academicUnit.html</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/StudentController.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/Semester.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/AcademicUnit.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateStudentController.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/User.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/CourseController.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateCourseController.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/Teacher.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/controller/UpdateAcademicUnitController.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/StudentRegistration.java</file>
             <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/com/magtech/LoginServlet.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/src/java/model/Course.java</file>
-            <file>file:/C:/Users/magtech/Documents/NetBeansProjects/midterm/web/semster.html</file>
         </group>
     </open-files>
 </project-private>
