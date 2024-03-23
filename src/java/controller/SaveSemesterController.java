@@ -31,7 +31,6 @@ public class SaveSemesterController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Insert Semester
         String semesterName = request.getParameter("semesterName");
         Date startingDate = null;
         Date endDate = null;

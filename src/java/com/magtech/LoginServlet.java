@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
         if (theUser != null && Password.checkPassword(password, theUser.getPassword())) {
             HttpSession session = req.getSession(true); 
             session.setAttribute("user", theUser.getStatus().toString());
-            session.setMaxInactiveInterval(60*60);
+            session.setMaxInactiveInterval(60);
             res.sendRedirect("index.html");
         } else {
             res.getWriter().print("Error: Login failed try again");

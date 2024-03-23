@@ -46,7 +46,7 @@ public class StudentController extends HttpServlet {
         String dateOfBirth = request.getParameter("dateOfBirth");
 
         Student student = new Student(firstName, lastName, dateOfBirth);
-        studentDao.createStudent(student); // Assuming you have a method to add a student in your DAO
+        studentDao.createStudent(student); 
 
         PrintWriter out = response.getWriter();
         out.println("Student inserted successfully!");

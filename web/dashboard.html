@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body {
+                background-color: whitesmoke; /* Light grey */
+            }
+
+            .card {
+                background: linear-gradient(#0a4d98, #ffffff);
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            .card-icon {
+                font-size: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <img src="./assets/images/auca-logo.png">
+            <h1 class="mt-4 mb-4">Dashboard</h1>
+
+            <div class="row">
+                <!-- Manage Students Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-user-graduate card-icon"></i>
+                            <h5 class="card-title">Manage Students and Teachers</h5>
+                            <p class="card-text">Add, update, and delete records.</p>
+                            <a href="student.html" class="btn btn-primary">Go to Students</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Courses Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-book card-icon"></i>
+                            <h5 class="card-title">Manage Courses </h5>
+                            <p class="card-text">Add, update, and delete course records.</p>
+                            <a href="course.html" class="btn btn-primary">Go to Courses</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Semesters Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-calendar-alt card-icon"></i>
+                            <h5 class="card-title">Manage Semesters</h5>
+                            <p class="card-text">Add, update, and delete semester records.</p>
+                            <a href="semster.html" class="btn btn-primary">Go to Semesters</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Academic Units Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-university card-icon"></i>
+                            <h5 class="card-title">Manage Academic Units</h5>
+                            <p class="card-text">Add, update, and delete academic unit records.</p>
+                            <a href="academicUnit.html" class="btn btn-primary">Go to Academic Units</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-university card-icon"></i>
+                            <h5 class="card-title">Manage Registration</h5>
+                            <p class="card-text">Add, update, and delete academic unit records.</p>
+                            <a href="registration.html" class="btn btn-primary">Go to Registration</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-university card-icon"></i>
+                            <h5 class="card-title">Go to Website</h5>
+                            <p class="card-text">Manage other website components</p>
+                            <a href="index.html" class="btn btn-primary">Go to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

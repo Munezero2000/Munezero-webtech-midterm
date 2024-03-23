@@ -1,7 +1,8 @@
-
 package dao;
 
+import java.util.Date;
 import java.util.List;
+import javax.persistence.*;
 import model.Semester;
 import org.hibernate.Session;
 
@@ -10,7 +11,10 @@ import org.hibernate.Session;
  * @author magtech
  */
 public class SemesterDao {
-     public Semester createSemester(Semester semester){
+
+    private EntityManager entityManager;
+
+    public Semester createSemester(Semester semester) {
         try {
             Session ss = HibernateUtil.getSessionFactory().openSession();
             ss.save(semester);
@@ -20,7 +24,8 @@ public class SemesterDao {
             e.printStackTrace();
         }
         return null;
-        }
+    }
+
     public Semester updateSemester(Semester semester) {
         try {
             Session ss = HibernateUtil.getSessionFactory().openSession();
@@ -32,6 +37,7 @@ public class SemesterDao {
         }
         return null;
     }
+
     public Semester DeleteSemester(Semester semester) {
         try {
             Session ss = HibernateUtil.getSessionFactory().openSession();
@@ -43,21 +49,23 @@ public class SemesterDao {
         }
         return null;
     }
+
     public Semester findSemesterById(Semester semester) {
         try {
             Session ss = HibernateUtil.getSessionFactory().openSession();
-            Semester theSemester =(Semester)ss.get(Semester.class, semester.getSemesterId());
+            Semester theSemester = (Semester) ss.get(Semester.class, semester.getSemesterId());
             return theSemester;
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
+
     public List<Semester> getAllSemesters() {
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
             List<Semester> semesters = session.createQuery("FROM Semester").list();
-            session.close(); 
+            session.close();
             return semesters;
         } catch (Exception e) {
             e.printStackTrace();
